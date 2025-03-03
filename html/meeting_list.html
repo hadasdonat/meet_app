@@ -6,16 +6,37 @@
     <title>רשימת פגישות</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/meetings.css">
-    <script src="../js/meetings.js" defer></script>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="../js/navbar.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/meetings.js"></script>
+    <script src="../js/main.js"></script>
+
 </head>
 <body>
+
+     <!-- סרגל ניווט -->
+     <nav>
+        <div class="logo">
+            <img src="../media/index/logo.png" alt="SmartMeet">
+            <!-- <span style="font-size: 22px; font-weight: bold;">SMARTMEET</span> -->
+        </div>
+        <ul>
+            <li><a href="meeting_list.html">הפגישות שלי</a></li>
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="login.html">התחברות</a></li>
+        </ul>
+        <a href="meeting_form.html" class="start-btn">התחל כאן</a>
+    </nav>
+
 
     <div class="meetings-container">
         <h2>הפגישות שלי</h2>
 
         <input type="text" class="search-bar" placeholder="חפש פגישה...">
 
-        <button class="btn btn-add">➕ הוסף פגישה</button>
+        <button class="btn btn-add" onclick="window.location.href='meeting_form.html';">➕ הוסף פגישה</button>
+
 
         <table class="meeting-table">
             <thead>
@@ -27,9 +48,11 @@
                 </tr>
             </thead>
             <tbody id="meetings-list">
+                <!-- כאן יוצגו הפגישות -->
             </tbody>
         </table>
     </div>
 
+    <script src="../js/meetings.js"></script>
 </body>
 </html>
