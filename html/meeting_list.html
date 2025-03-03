@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רשימת פגישות</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/meetings.css">
+    <script src="../js/meetings.js" defer></script>
+</head>
+<body>
+
+    <div class="meetings-container">
+        <h2>הפגישות שלי</h2>
+
+        <input type="text" class="search-bar" placeholder="חפש פגישה...">
+
+        <button class="btn btn-add">➕ הוסף פגישה</button>
+
+        <table class="meeting-table">
+            <thead>
+                <tr>
+                    <th>כותרת</th>
+                    <th>תאריך</th>
+                    <th>משתתפים</th>
+                    <th>פעולות</th>
+                </tr>
+            </thead>
+            <tbody id="meetings-list">
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

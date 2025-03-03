@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קביעת פגישה</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="../js/navbar.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/meetings.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+     <!-- סרגל ניווט -->
+     <nav>
+        <div class="logo">
+            <img src="../media/index/logo.png" alt="SmartMeet">
+            <!-- <span style="font-size: 22px; font-weight: bold;">SMARTMEET</span> -->
+        </div>
+        <ul>
+            <li><a href="meeting_list.html">הפגישות שלי</a></li>
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="login.html">התחברות</a></li>
+        </ul>
+        <a href="meeting_form.html" class="start-btn">התחל כאן</a>
+    </nav>
+
+    <div class="meeting-container">
+        <h2>קבע פגישה</h2>
+
+        <div class="input-group">
+            <i class="fas fa-heading"></i>
+            <input type="text" placeholder="כותרת הפגישה">
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-calendar"></i>
+            <input type="date" placeholder="תאריך">
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-user-friends"></i>
+            <input type="text" placeholder="משתתפים (מופרדים בפסיק)">
+        </div>
+
+        <button class="save-meeting-btn">שמור פגישה</button>
+        <p><a href="meeting_list.html">חזור לרשימת הפגישות</a></p>
+    </div>
+
+</body>
+</html>

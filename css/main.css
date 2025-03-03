@@ -1,0 +1,160 @@
+/* עיצוב בסיסי */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f8f9fa, #e3eaf5);
+    color: #333;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* מבנה רספונסיבי */
+.hero {
+    display: flex;
+    flex-direction: row-reverse; /* טקסט מימין, תמונות משמאל */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* עיצוב טקסט */
+.hero-text {
+    text-align: right;
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    color: #222;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 16px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff7e5f, #ff6a00);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn:hover {
+    background: linear-gradient(to right, #ff6a00, #ff4500);
+    transform: scale(1.05);
+}
+
+/* עיצוב התמונות */
+.hero-images {
+    display: flex;
+    position: relative;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.hero-images img {
+    width: 360px; /* הגדלת התמונות */
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+/* שינוי מיקומי התמונות להפחתת החפיפה */
+.hero-images img:nth-child(1) {
+    top: -70px;
+    left: -90px;
+    z-index: 3;
+}
+
+.hero-images img:nth-child(2) {
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.hero-images img:nth-child(3) {
+    top: 70px;
+    left: 90px;
+    z-index: 1;
+}
+
+/* רספונסיביות למסכים קטנים */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-images {
+        max-width: 90%;
+    }
+
+    .hero-images {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-images img {
+        width: 30%;
+    }
+}
+
+/* כפתורי עזרה */
+.bottom-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.bottom-buttons .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-help {
+    background: #007bff;
+}
+
+.btn-call {
+    background: #007bff;
+}
+
+.btn-design {
+    background: #ffcc00;
+    color: black;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
