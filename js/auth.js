@@ -1,19 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginBtn = document.querySelector(".login-btn");
     if (loginBtn) {
-        loginBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            alert("התחברת בהצלחה!");
-            window.location.href = "meeting_list.html";
-        });
-    }
+        loginBtn.addEventListener("click", async function () {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
 
-    const registerBtn = document.querySelector(".register-btn");
-    if (registerBtn) {
-        registerBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            alert("נרשמת בהצלחה!");
-            window.location.href = "login.html";
+            const response = await fetch(`${API_URL}/login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+
+            if (data.token) {
+                localStorage.setItem("userToken", data.token);
+                window.location.href = "/meetings";
+            } else {
+                alert("שגיאה בהתחברות");
+            }
         });
     }
 });
